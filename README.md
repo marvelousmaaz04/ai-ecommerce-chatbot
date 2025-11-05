@@ -62,7 +62,7 @@ Create a `.env` file in the project's root directory (alongside the `app` folder
 
 ```bash
 GROQ_API_KEY="your_groq_api_key_here"
-GROQ_MODEL="llama3-70b-8192"
+GROQ_MODEL="llama-3.3-70b-versatile"
 ```
 
 ### 3\. Install Dependencies
@@ -71,17 +71,30 @@ You can use either `pip` or `uv`.
 
 #### 🧩 Option A — Using `pip`
 
-Install all dependencies from your `requirements.txt` file:
+1.  **Create and activate a virtual environment:**
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    # Create the environment
+    python -m venv .venv
+
+    # Activate on macOS / Linux
+    source .venv/bin/activate
+
+    # Activate on Windows
+    .\.venv\Scripts\activate
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 -----
 
 #### ⚡ Option B — Using `uv` (Recommended)
 
-[`uv`](https://www.google.com/search?q=%5Bhttps://github.com/astral-sh/uv%5D\(https://github.com/astral-sh/uv\)) is an extremely fast Python package installer and resolver.
+[`uv`](https://www.google.com/search?q=%5Bhttps://docs.astral.sh/uv/getting-started/installation/%5D\(https://docs.astral.sh/uv/getting-started/installation/\)) is an extremely fast Python package installer and resolver.
 
 1.  **Install `uv`** (if you don't have it)
     ```bash
@@ -105,7 +118,7 @@ pip install -r requirements.txt
 2.  If you used `uv` (or a manual venv), activate the virtual environment:
     ```bash
     source .venv/bin/activate
-    # On Windows: .venv\Scripts\activate
+    # On Windows: .\.venv\Scripts\activate
     ```
 3.  Run the Streamlit app:
     ```bash
